@@ -1,0 +1,5 @@
+name: oauth2-module
+title: "Module: Security - OAuth2"
+version: dev
+nav:
+- modules/ROOT/nav.adoc

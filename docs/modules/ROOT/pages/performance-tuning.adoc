@@ -1,0 +1,27 @@
+= Performance tuning
+
+[#caching]
+== Caching
+
+The `OAuth2Module` will automatically use caching on `OAuth2Client` objects and access tokens when a cache with the following names are found:
+
+* oauth2ClientCache
+* oauth2AuthenticationByAccessTokenCache
+
+.Example ehcache configuration
+[source,java,indent=0]
+[subs="verbatim,quotes,attributes"]
+----
+
+    <cache name="oauth2ClientCache" statistics="true" maxElementsInMemory="10"
+     timeToLiveSeconds="3600" memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <cache name="oauth2AuthenticationByAccessTokenCache" statistics="true" maxElementsInMemory="100"
+     timeToLiveSeconds="3600" memoryStoreEvictionPolicy="LRU">
+    </cache>
+----
+
+[#locking]
+== Distributed locking
+
+tbd

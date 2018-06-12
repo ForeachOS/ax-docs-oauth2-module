@@ -1,0 +1,35 @@
+= Module settings
+
+All properties start with the *oauth2Module.* prefix.
+
+|===
+|Property |Type |Description |Default
+
+|approval.formEndpoint
+|`java.util.String`
+|Optional Specifies whether the default spring endpoint for the approval form should be used (when left empty) or the custom endpoint that redirects to a custom form.
+|""
+
+|approval.handler
+|`com.foreach.across.modules.oauth2.ApprovalHandler`
+|Optional Specify how user approvals should be handled and remembered (defaults to storing approvals in an approval store).
+|_APPROVAL_STORE_
+
+|approval.store
+|`com.foreach.across.modules.oauth2.ApprovalStore`
+|Optional Specify the type of approval store that should be used (defaults to jdbc - storing approvals in database).
+|_JDBC_
+
+|useJdbcAuthorizationCodeServices
+|`boolean`
+|Optional Specifies whether the authorization process should use a jdbcAuthorizationCodeService instead of the default inMemoryAuthorizationCodeService.
+Only relevant if SpringSecurityAclModule is active.
+|_false_
+
+|useLockingForTokenCreation
+|`boolean`
+|Should the `DistributedLockRepository` be used for locking on token creation.
+Incurs a performance hit but ensures compatibility in a scaled out scenario.
+|_true_
+
+|===

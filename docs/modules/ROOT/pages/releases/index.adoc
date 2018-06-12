@@ -1,0 +1,42 @@
+= OAuth2Module releases
+
+[[module-artifact]]
+== Artifact
+
+[source,xml]
+----
+<dependencies>
+    <dependency>
+        <groupId>com.foreach.across.modules</groupId>
+        <artifactId>oauth2-module</artifactId>
+    </dependency>
+</dependencies>
+----
+
+== Release notes
+
+OAuth2Module follows a https://semver.org[semantic versioning] scheme.
+
+* xref:releases/2.x.adoc#2-0-0[2.0.0]
+
+[[module-dependencies]]
+== Module dependencies
+
+.Module dependencies
+|===
+|Module |Type |Description
+
+|UserModule
+|required
+|`OAuth2Module` requires the `UserModule`. This is because the `OAuth2Client` extends `BasicSecurityPrincipal`.
+It also sets the `UserDirectory` when none was specified.
+
+|SpringSecurityModule
+|required
+|`OAuth2Module` requires the `SpringSecurityModule`. The `SpringSecurityModule` is used to secure the `AuthorizationServer` and `ResourceServer`.
+
+|<<integration:ehcache,EhcacheModule>>
+|required
+|In combination with the `EhcacheModule` this enable caching on several business objects.
+
+|===

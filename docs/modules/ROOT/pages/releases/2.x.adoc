@@ -1,0 +1,14 @@
+= 2.x.x release notes
+
+[#2-1-0]
+== 2.1.0-SNAPSHOT
+* enabled administration UI for managing clients
+
+[#2-0-0]
+== 2.0.0.RELEASE
+Requires Across 2.0.0+
+
+* for consistency, the property prefix has been changed from *OAuth2Module.* to *oauth2Module.*
+* compatibility update with Spring 4.2.
+* added support for multiple user directories
+* added default `SecurityPrincipalLabelResolver` for `OAuth2Client`

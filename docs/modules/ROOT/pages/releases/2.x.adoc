@@ -4,6 +4,17 @@
 == 2.1.0-SNAPSHOT
 * enabled administration UI for managing clients
 
+[#2-0-1]
+== 2.0.1-SNAPSHOT
+Bug fix release that solves some performance issues with fetching OAuth2Client entities: the more clients you had, the longer it would take to fetch a single client.
+
+WARNING: Because a property (`OAuth2Scope.oAuth2ClientScopes`) has been removed it is possible this constitutes a breaking change for some application.
+Most applications will never notice its disappearance.
+
+* removed the `getOAuth2ClientScopes()` collection on `OAuth2Scope`
+** this `OneToMany` was the cause of N+1 queries due to eager fetching, this property has been removed altogether as the added value of mapping it directly was very limited
+* added `addScope()` and `removeScope()` methods on `OAuth2Client`
+
 [#2-0-0]
 == 2.0.0.RELEASE
 Requires Across 2.0.0+

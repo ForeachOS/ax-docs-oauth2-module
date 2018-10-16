@@ -1,5 +1,10 @@
 = 2.x.x release notes
 
+[#2-1-]
+== 2.1.0-SNAPSHOT
+
+* an administration UI for managing OAuth2 clients and scopes has been provided
+
 [#2-0-1]
 == 2.0.1.RELEASE
 Bug fix release that solves some performance issues with fetching OAuth2Client entities: the more clients you had, the longer it would take to fetch a single client.

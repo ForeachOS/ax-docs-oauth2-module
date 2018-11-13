@@ -36,8 +36,15 @@ It also sets the `UserDirectory` when none was specified.
 |required
 |`OAuth2Module` requires the `SpringSecurityModule`. The `SpringSecurityModule` is used to secure the `AuthorizationServer` and `ResourceServer`.
 
+|link:{url-AdminWebModule}[AdminWebModule]
+|optional
+|In combination with the `EntityModule` this enables an administration UI for managing clients.
+
 |<<integration:ehcache,EhcacheModule>>
-|required
+|optional
 |In combination with the `EhcacheModule` this enable caching on several business objects.
 
+|link:{url-EntityModule}[EntityModule]
+|optional
+|In combination with the `AdminWebModule` this enables an administration UI for managing clients.
 |===

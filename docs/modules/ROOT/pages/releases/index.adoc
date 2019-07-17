@@ -17,7 +17,7 @@
 
 OAuth2Module follows a https://semver.org[semantic versioning] scheme.
 
-* xref:releases/2.x.adoc#2-1-0[2.1.0]
+* xref:releases/2.x.adoc#2-1-1[2.1.1]
 * xref:releases/2.x.adoc#2-0-1[2.0.1]
 
 [[module-dependencies]]

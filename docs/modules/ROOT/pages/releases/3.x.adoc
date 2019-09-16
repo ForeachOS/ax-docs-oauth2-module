@@ -3,3 +3,6 @@
 [#3-0-0]
 == 3.0.0.RELEASE
 * *Requires Across 5.0.0.*
+* Bumped to spring-security-oauth2 2.3.3.RELEASE
+* Ensure distributed lock taking is outside of a running transaction.
+Improves reliability at the cost of performance and additional datasource connections (see `IsolatedLockHandler`).

@@ -2,7 +2,7 @@
 
 [#3-0-0]
 == 3.0.0.RELEASE
-* *Requires Across 5.0.0.*
+* *Requires Across 5.0.1.*
 * Bumped to spring-security-oauth2 2.3.3.RELEASE
 * Ensure distributed lock taking is outside of a running transaction.
 * Renamed UserDetailsOAuth2AuthenticationSerializer to SecurityPrincipalIdOAuth2AuthenticationSerializer

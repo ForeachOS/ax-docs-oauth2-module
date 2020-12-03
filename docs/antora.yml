@@ -1,5 +1,5 @@
 name: oauth2-module
 title: "Module: Security - OAuth2"
-version: 3.1.0-SNAPSHOT
+version: master
 nav:
 - modules/ROOT/nav.adoc
